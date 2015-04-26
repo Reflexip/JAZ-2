@@ -11,17 +11,6 @@ public class CheckAccount {
 
 	
 	public CheckAccount(HttpServletRequest request, ArrayList<User> users){
-		for(int i = 0; i <= 1; i++){
-			if(request.getParameter("login") == users.get(i).getLogin()){
-				if(request.getParameter("password") == users.get(i).getPassword()){
-					 exist = true;	
-				}
-				else exist = false;
-			}
-			else exist = false;
-			
-				
-			}
 		
 			
 		}

@@ -4,23 +4,20 @@ import java.util.ArrayList;
 
 public class DummyDB{
 	
-	private ArrayList<User> users = new ArrayList<User>();
-	private User admin;
-	
+	private static ArrayList<User> users = new ArrayList<User>();
 
-	public DummyDB(){
-		addAdmin();
-	}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	public void addUser(User user){
+		users.add(user);
+	}
 
-	
-	public void addAdmin(){
-		users.add((admin = new User(AccountType.ADMIN, "admin", "admin", "admin@admin.com")));
+	public int getArraySize(){
+		return users.size();
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	public ArrayList<User> getUsers() {
+	public static ArrayList<User> getUsers() {
 		return users;
 	}
 
@@ -28,13 +25,6 @@ public class DummyDB{
 		this.users = users;
 	}
 
-	public User getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(User admin) {
-		this.admin = admin;
-	}
-
+	
 
 }

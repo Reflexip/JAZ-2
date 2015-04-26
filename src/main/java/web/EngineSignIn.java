@@ -26,13 +26,7 @@ public class EngineSignIn extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		DummyDB dataBase = new DummyDB();
-		CheckAccount check = new CheckAccount(request, dataBase.getUsers());
-			if(check.isExist()){
-				response.sendRedirect("UserPage.jsp");
-			}
-		
-		
+	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
