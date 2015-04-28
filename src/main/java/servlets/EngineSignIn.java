@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import contexts.GetContext;
 import contexts.SetContext;
 import classes.CheckUser;
+
 import classes.User;
 import classes.UsersManager;
 
@@ -40,7 +41,8 @@ public class EngineSignIn extends HttpServlet {
 		if(checker.isExist(usersManager.getUsers(), request)){
 			loggedUser = checker.getLoggedUser(usersManager.getUsers(), request);
 			setContext.setLoggedUserContext(loggedUser);
-			response.sendRedirect("results/MySite.jsp");
+			response.sendRedirect("EngineMySite");
+			
 			
 		
 		}

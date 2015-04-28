@@ -7,8 +7,8 @@
 <title>My Site</title>
 </head>
 <body>
-Username: ${requestLogin} <br></br>
-Email: ${requestEmail} <br></br>
+Username:${requestLogin} <br></br>
+Email:${requestEmail} <br></br>
 
 </body>
 </html>

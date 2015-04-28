@@ -10,14 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import contexts.GetContext;
 import contexts.SetContext;
-import classes.SetRequest;
 import classes.User;
 
-@WebServlet("results/MySite")
+@WebServlet("EngineMySite")
 public class EngineMySite extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        User me;
-       SetRequest setRequest;
 
     public EngineMySite() {
         super();
@@ -28,12 +26,11 @@ public class EngineMySite extends HttpServlet {
 		SetContext setContext = new SetContext(getServletContext());
 		GetContext getContext = new GetContext(getServletContext());
 		
-		me = (User)getContext.getLoggedUserContext();
+		me = getContext.getLoggedUserContext();
 		
-		setRequest.setRequestAtributes(request, me);
-		getServletContext().getRequestDispatcher("results/MySite.jsp").forward(request, response);
-		
-	
+		request.setAttribute("requestLogin", me.getLogin());
+		request.setAttribute("requestEmail", me.getEmail());
+		getServletContext().getRequestDispatcher("/results/MySite.jsp").forward(request, response);
 	}
 
 	

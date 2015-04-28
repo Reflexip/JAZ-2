@@ -5,9 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 public class SetRequest {
 
 //Methods----------------------------------------------------------------
-	
-	public void setRequestAtributes(HttpServletRequest request, User user){
+
+	public HttpServletRequest setRequestAtributes(HttpServletRequest request, User user){
 		request.setAttribute("requestLogin", user.getLogin());
-		request.setAttribute("requestEmail", user.getLogin());
+		request.setAttribute("requestEmail", user.getEmail());
+		
+		return request;
 	}
 }
