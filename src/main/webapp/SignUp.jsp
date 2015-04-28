@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Formularz logowania</title>
+<title>Formularz Rejestracji</title>
 </head>
 <body>
 <form action="EngineSignIn" method="get">
