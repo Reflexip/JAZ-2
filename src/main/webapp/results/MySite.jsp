@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Twoja strona</title>
+<title>My Site</title>
 </head>
 <body>
-Strona uzytkownika
+Username: ${requestLogin} <br></br>
+Email: ${requestEmail} <br></br>
+
 </body>
 </html>

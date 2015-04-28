@@ -4,16 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Formularz logowania</title>
+<title>Sign In</title>
 </head>
 <body>
+<center>
 <form action="EngineSignIn" method="get">
   Login:<br><input type="text" placehold="Login" name="login"><br>
-  Password:<br><input type="text" placehold="Password" name="password"><br><br>
+  Password:<br><input type="password" placehold="Password" name="password"><br><br>
   <input type="submit" value="Sign In">
   <a href="SignUp.jsp"><button type="button">Sign Up</button>
+  <a href="SignUp.jsp"><button name = "guest" type="button">Sign in as Guest</button>
 </form>
-
+</center>
 
 </body>
 </html>

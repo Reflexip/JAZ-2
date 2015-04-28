@@ -7,17 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-Blednie potwierdzone hasloRejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-Rejestracja przebiegla pomyslnie.
-
+<center>Sign in failed.<br>
+Wrong password or account doesn't exist.<br>
+Do you want to try again or sign up?<br>
+<a href="../SignIn.jsp"><button>Try again</button></a>
+<a href="../SignUp.jsp"><button>Sign up</button></a>
+</center>
 </body>
 </html>

@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Formularz Rejestracji</title>
+<title>Sign Up</title>
 </head>
 <body>
+<center>
 <form action="EngineSignIn" method="get">
  
   Login:<br><input type="text" placehold="Login" name="login"><br>
@@ -17,5 +18,6 @@
   <input type="submit" value="Sign Up">
   <input type="reset" value="Clear form">
 </form>
+</center>
 </body>
 </html>

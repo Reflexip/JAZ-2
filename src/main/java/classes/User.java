@@ -3,6 +3,7 @@ package classes;
 import javax.servlet.http.HttpServletRequest;
 
 public class User {
+	
 //Fields-----------------------------------------------------------------
 	private String login;
 	private String password;
@@ -26,6 +27,8 @@ public class User {
 	
 //Getters and Setters-----------------------------------------------------
 
+		
+	
 	public String getLogin() {
 		return login;
 	}
