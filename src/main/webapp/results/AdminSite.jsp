@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>My Site</title>
+<title>Admin Site</title>
 </head>
 <body>
 Username:${requestLogin} <br></br>
 Email:${requestEmail} <br></br>
-<a href = "Premium.jsp"><button type = "button">Premium Site</button></a>
+<a href = "PremiumManager.jsp"><button type = "button">Premium Manager</button></a>
 </body>
 </html>

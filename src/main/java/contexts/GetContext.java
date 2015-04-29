@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.servlet.ServletContext;
 
 import classes.User;
+import classes.UsersManager;
 
 public class GetContext {
 //Fields-----------------------------------------------------------------
@@ -18,8 +19,8 @@ public class GetContext {
 	public User getLoggedUserContext(){
 		return (User)context.getAttribute("loggedUser");
 	}
-	public ArrayList<User> getBaseContext(){
-		return (ArrayList<User>)context.getAttribute("UsersManager.users");
+	public UsersManager getBaseContext(){
+		return (UsersManager)context.getAttribute("usersManager");
 	}
 	
 }

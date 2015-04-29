@@ -6,9 +6,10 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UsersManager {
 //Fields-----------------------------------------------------------------
-	private ArrayList<User> users = new ArrayList<User>();
+	public static ArrayList<User> users;
 //Constructors-----------------------------------------------------------
 	public UsersManager(){
+		users = new ArrayList<User>();
 		users.add(new User("admin","admin","admin@admin.pl",AccType.ADMIN));
 	}
 	
@@ -18,12 +19,10 @@ public class UsersManager {
 		users.add(user);
 	}
 	public ArrayList<User> getUsers(){
-		return users;
+		return (ArrayList<User>)users;
 	}
-	public void setUsers(ArrayList<User> users){
-		this.users = users;		
-	}
-	public int getUsersSize(){
+
+	public static int getUsersSize(){
 		return users.size();
 	}
 //-----------------------------------------------------------------------

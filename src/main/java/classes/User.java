@@ -11,14 +11,14 @@ public class User {
 	private AccType accType;
 //Constructors-----------------------------------------------------------	
 	
-	User(HttpServletRequest request){
+	public User(HttpServletRequest request){
 		this.login = request.getParameter("login");
 		this.password = request.getParameter("password");
 		this.email = request.getParameter("email");
 		this.accType = AccType.NORMAL;
 	}
 
-	User(String login, String password, String email, AccType accType){
+	public User(String login, String password, String email, AccType accType){
 		this.login = login;
 		this.password = password;
 		this.email = email;

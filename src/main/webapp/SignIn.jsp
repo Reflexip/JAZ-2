@@ -12,8 +12,7 @@
   Login:<br><input type="text" placehold="Login" name="login"><br>
   Password:<br><input type="password" placehold="Password" name="password"><br><br>
   <input type="submit" value="Sign In">
-  <a href="SignUp.jsp"><button type="button">Sign Up</button>
-  <a href="SignUp.jsp"><button name = "guest" type="button">Sign in as Guest</button>
+  <a href="SignUp.jsp"><button type="button">Sign Up</button></a>
 </form>
 </center>
 

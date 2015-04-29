@@ -26,7 +26,7 @@ public class SetContext {
 	}
 	
 	public void setBaseContext(UsersManager usersManager){
-		context.setAttribute("UsersManager.users", usersManager.getUsers());
+		context.setAttribute("usersManager", usersManager);
 	}
 	
 	

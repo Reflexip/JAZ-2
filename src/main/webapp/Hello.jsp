@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>My Site</title>
+<title>Hello</title>
 </head>
 <body>
-Username:${requestLogin} <br></br>
-Email:${requestEmail} <br></br>
-<a href = "Premium.jsp"><button type = "button">Premium Site</button></a>
+<center>
+<a href="Hello"><button type = "button">Go to the site.</button></a>
+</center>
+
 </body>
 </html>

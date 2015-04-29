@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import contexts.GetContext;
 import contexts.SetContext;
 import classes.CheckUser;
-
 import classes.User;
 import classes.UsersManager;
 
@@ -20,9 +20,9 @@ import classes.UsersManager;
 public class EngineSignIn extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 //Fields-----------------------------------------------------------------
-    UsersManager usersManager = new UsersManager();
-    CheckUser checker = new CheckUser();
-    User loggedUser;
+	CheckUser checker = new CheckUser();
+	UsersManager usersManager;
+	User loggedUser;
 //Constructors-----------------------------------------------------------
 
     public EngineSignIn() {
@@ -35,21 +35,17 @@ public class EngineSignIn extends HttpServlet {
 		SetContext setContext = new SetContext(getServletContext());
 		GetContext getContext = new GetContext(getServletContext());
 		
-		setContext.setBaseContext(usersManager);
-		
+		usersManager = getContext.getBaseContext();
 		
 		if(checker.isExist(usersManager.getUsers(), request)){
 			loggedUser = checker.getLoggedUser(usersManager.getUsers(), request);
 			setContext.setLoggedUserContext(loggedUser);
 			response.sendRedirect("EngineMySite");
-			
-			
-		
 		}
 		else response.sendRedirect("results/PassFailed.jsp");
-		
-	
 	}
+	
+	
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
