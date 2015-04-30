@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 
 public class CheckUser {
-	
+//Fields-----------------------------------------------------------------
+	User loggedUser;
 //Methods----------------------------------------------------------------
 	
 	//Method check user in base
@@ -29,7 +30,8 @@ public class CheckUser {
 		for(User user : users){
 			if(user.getLogin().equals(request.getParameter("login"))){
 				if(user.getPassword().equals(request.getParameter("password"))){
-					return user;
+					loggedUser = user;
+					return loggedUser;
 				}
 				return null; 
 			}
