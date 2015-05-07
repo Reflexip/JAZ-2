@@ -2,50 +2,45 @@ package servlets;
 
 import java.io.IOException;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
-
-import context.GetContext;
-import context.SetContext;
 import classes.AccType;
 import classes.CheckUser;
 import classes.User;
+import classes.UsersManager;
+import context.GetContext;
+import context.SetContext;
 
-@WebServlet("/EngineMySite")
-public class EngineMySite extends HttpServlet {
+
+@WebServlet("/EngineDisablePremium")
+public class EngineDisablePremium extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-		CheckUser checker;
-   
-       
-    public EngineMySite() {
+	UsersManager usersManager;
+	CheckUser checker;
+    public EngineDisablePremium() {
         super();
     }
 
-	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		SetContext setContext = new SetContext(getServletContext());
 		GetContext getContext = new GetContext(getServletContext());
 		
+		usersManager = (UsersManager)getContext.getContext();
 		checker = (CheckUser)getContext.getCheckUserContext();
-		
-
-		
-		request.setAttribute("requestLogin", 	checker.getActualUser().getLogin());
-		request.setAttribute("requestEmail", 	checker.getActualUser().getEmail());
-		request.setAttribute("requestAccType",	checker.getActualUser().getAccType());
-		if(checker.getActualUser().getAccType().equals(AccType.ADMIN)){
-			getServletContext().getRequestDispatcher("/AdminSite.jsp").forward(request, response);
+		if(checker.isExist2(usersManager.getUsers(), request.getParameter("username"))){
+			for(User user : usersManager.getUsers()){
+				if(user.getLogin().equals(request.getParameter("username"))){
+					user.setAccType(AccType.NORMAL);
+				}
+			}
 		}
-		else{
-			getServletContext().getRequestDispatcher("/MySite.jsp").forward(request, response);
-		}
+		else response.getWriter().print("This user doesn't extist.");
+		response.sendRedirect("EnginePremiumManager");
 	}
 
 	

@@ -6,11 +6,11 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UsersManager {
 //Fields-----------------------------------------------------------------
-	public static ArrayList<User> users;
+	private ArrayList<User> users = new ArrayList<User>();
 //Constructors-----------------------------------------------------------
 	public UsersManager(){
-		users = new ArrayList<User>();
-		users.add(new User("admin","admin","admin@admin.pl",AccType.ADMIN));
+		addUser(new User("admin","admin","admin@admin.pl",AccType.ADMIN));
+		
 	}
 	
 //Methods----------------------------------------------------------------
@@ -19,12 +19,22 @@ public class UsersManager {
 		users.add(user);
 	}
 	public ArrayList<User> getUsers(){
-		return (ArrayList<User>)users;
+		return users;
 	}
-
-	public static int getUsersSize(){
+	public int getUsersSize(){
 		return users.size();
 	}
+	public boolean isExist(HttpServletRequest request){
+		for(User user : users){
+			if(user.getLogin().equals(request.getParameter("login"))){
+				return true;
+			}
+			else return false;
+		}
+		return false;
+		
+	}
+	
 //-----------------------------------------------------------------------
 
 }

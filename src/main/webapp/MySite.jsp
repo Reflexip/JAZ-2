@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>My Site</title>
 </head>
 <body>
-GJ ZALOGOWANY
+Username:${requestLogin} <br></br>
+Email:${requestEmail} <br></br>
+Account Type:${requestAccType} <br></br>
+<a href = "Premium.jsp"><button type = "button">Premium Site</button></a>
+<a href = "EngineLogout"><button type = "button">Logout</button></a>
 </body>
 </html>

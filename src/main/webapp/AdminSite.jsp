@@ -4,14 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin Site</title>
 </head>
 <body>
-<center>Sign in failed.<br>
-Wrong password or account doesn't exist.<br>
-Do you want to try again or sign up?<br>
-<a href="../SignIn.jsp"><button>Try again</button></a>
-<a href="../SignUp.jsp"><button>Sign up</button></a>
-</center>
+Username:${requestLogin} <br></br>
+Email:${requestEmail} <br></br>
+<a href = "Premium.jsp"><button type = "button">Premium Site</button></a>
+<a href = "EnginePremiumManager"><button type = "button">Premium Manager</button></a>
+<a href = "EngineLogout"><button type = "button">Logout</button></a>
 </body>
 </html>

@@ -9,9 +9,10 @@
 <body>
 <center>
 <form action="EngineSignIn" method="get">
-  Login:<br><input type="text" placehold="Login" name="login"><br>
-  Password:<br><input type="password" placehold="Password" name="password"><br><br>
-  <input type="submit" value="Sign In">
+  Login:<br>	<input type="text" 		placehold="Login" 		name="login"><br>
+  Password:<br>	<input type="password" 	placehold="Password" 	name="password"><br><br>
+  				<input type="submit" 	value="Sign In">
+  
   <a href="SignUp.jsp"><button type="button">Sign Up</button></a>
 </form>
 </center>

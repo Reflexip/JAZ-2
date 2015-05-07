@@ -8,5 +8,6 @@
 </head>
 <body>
 Strona Premium
+<a href = "EngineMySite"><button type = "button">My Site</button></a>
 </body>
 </html>

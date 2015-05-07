@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import context.GetContext;
+import context.SetContext;
+import classes.AccType;
 import classes.CheckUser;
 import classes.User;
 import classes.UsersManager;
@@ -20,7 +23,6 @@ public class EngineHello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UsersManager usersManager = new UsersManager();
 	CheckUser checker = new CheckUser();
-	ArrayList<User> users;
 	
     public EngineHello() {
         super();
@@ -28,9 +30,12 @@ public class EngineHello extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServletContext context = getServletContext();
+		SetContext setContext = new SetContext(getServletContext());
+		GetContext getContext = new GetContext(getServletContext());
 		
-		context.setAttribute("classess.UsersManager.users", usersManager.getUsers());
+		setContext.setContext(usersManager);
+		setContext.setCheckUserContext(checker);
+		
 		
 		response.sendRedirect("SignIn.jsp");
 		}

@@ -10,10 +10,10 @@
 <center>
 <form action="EngineSignUp" method="get">
  
-  Login:<br><input type="text" placehold="Login" name="login"><br>
-  Password:<br><input type="password" placehold="Password" name="password"><br><br>
-  Confirm password:<br><input type="password" placehold="Password" name="passConfirm"><br><br>
-  Email:<br><input type="email" placehold="email" name="email"><br><br>
+  Login:<br>			<input type="text" 		placehold="Login"	 	name="login"><br>
+  Password:<br>			<input type="password" 	placehold="Password" 	name="password"><br><br>
+  Confirm password:<br>	<input type="password" 	placehold="Password" 	name="passConfirm"><br><br>
+  Email:<br>			<input type="email" 	placehold="email" 		name="email"><br><br>
   
   <input type="submit" value="Sign Up">
   <input type="reset" value="Clear form">
